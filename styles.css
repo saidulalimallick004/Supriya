@@ -133,11 +133,14 @@ section.in-view {
 }
 
 .about-description {
-    background-color: #f4f4f4;
     text-align: left;
     margin-left: 20px;  
     font-size: 16px;   
-    line-height: 1.6;   
+    line-height: 1.6; 
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;  
 }
 
 
@@ -153,7 +156,7 @@ section.in-view {
     border-radius: 8px;
 }
 
-.project-descriptionc {
+.project-description {
     text-align: left;
     margin-left: 20px; 
     font-size: 16px;   
@@ -202,4 +205,26 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+/*----------------------------------------------*/
+
+.text-container {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.more-text {
+    display: none; /* Hide the extra text */
+}
+
+.read-more-btn {
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    font-size: 18px;
 }

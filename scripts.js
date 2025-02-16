@@ -2,6 +2,18 @@ function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
+function toggleText(button) {
+    let moreText = button.previousElementSibling.querySelector(".more-text");
+
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline";
+        button.textContent = "Read Less";
+    } else {
+        moreText.style.display = "none";
+        button.textContent = "Read More";
+    }
+}
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Your message has been sent!');

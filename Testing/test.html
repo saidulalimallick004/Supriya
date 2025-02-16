@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More / Read Less</title>
+    <style>
+        .text-container {
+            width: 60%;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .more-text {
+            display: none; /* Hide the extra text */
+        }
+
+        .read-more-btn {
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            background: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-container">
+        <p>
+            This is a short preview of the text.
+            <span class="more-text">
+                <b>🌞 Key Features:</b>
+                
+                    <br>&emsp;✅ Deep Learning Model: Utilizes CNN architectures.
+                    <br>&emsp;✅ High Accuracy Prediction: Achieves precise classification through extensive training and data augmentation.
+                    <br>&emsp;✅ Real-Time Image Classification: Allows users to upload an image and get instant results.
+                    <br>&emsp;✅ Dataset Handling: Trained on datasets like Kaggle's "Dogs vs. Cats" or custom datasets.
+                    <br>&emsp;✅ Deployment Ready: Can be integrated into a web app using Flask/Django.
+                    
+                <br>
+                <b>🌞 Tech Stack Used:</b>
+
+                    <br>&emsp;✅ Python (NumPy, Pandas, Matplotlib)
+                    <br>&emsp;✅ TensorFlow / Keras / PyTorch
+                    <br>&emsp;✅ PIL for image preprocessing
+                    <br>&emsp;✅ Streamlit (for web-based deployment)
+            </span>
+        </p>
+        <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+    </div>
+
+    <script>
+        function toggleText(button) {
+            let moreText = button.previousElementSibling.querySelector(".more-text");
+
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline";
+                button.textContent = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+    </script>
+
+</body>
+</html>
