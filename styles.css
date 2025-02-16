@@ -9,7 +9,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 30px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -81,18 +81,17 @@ nav ul li a {
     border-right: 2px solid white;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3s steps(30, end);
+    animation: typing 5s steps(30, end);
 }
 
-/* Typing effect */
+
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
 
-/* Remove blinking cursor */
 .typewriter::after {
-    content: "";  /* Removes the cursor effect */
+    content: ""; 
     animation: none;
 }
 
@@ -133,6 +132,15 @@ section.in-view {
     transform: translateY(0);
 }
 
+.about-description {
+    background-color: #f4f4f4;
+    text-align: left;
+    margin-left: 20px;  
+    font-size: 16px;   
+    line-height: 1.6;   
+}
+
+
 .item-skills{
     display: flex;
     justify-content: space-around;
@@ -144,6 +152,14 @@ section.in-view {
     padding: 20px;
     border-radius: 8px;
 }
+
+.project-descriptionc {
+    text-align: left;
+    margin-left: 20px; 
+    font-size: 16px;   
+    line-height: 1.6;  
+}
+
 
 #contact-form {
     max-width: 600px;
